@@ -1,0 +1,63 @@
+<!-- 김병훈 v1.1 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=540,user-scalable=no" />
+    <meta name="apple-mobile-web-app-title" content="NAVER" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>롯데백화점 Christmas Card Game</title>
+    <style>
+        .soundIconBg{
+            position: relative;
+            top: 0;
+            left: 30px;
+            width: 62px;
+            height: 96px;
+            background: url('img/btn.png') center no-repeat;
+            z-index: 5;
+        }
+        .soundIcon{
+            position: absolute;
+            top: 38px;
+            left: -9px;
+            width: 80px;
+            height: 58px;
+        }
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            z-index: 2;
+        }
+
+        #sound-on {
+            display: none;
+            background: url('img/on.png') center center no-repeat;
+        }
+
+        #sound-off {
+            display: block;
+            background: url('img/off.png') center center no-repeat;
+        }
+    </style>
+</head>
+
+<body>  
+    <div class="soundIconBg">
+        <button class="soundIcon" id="sound-off"></button>
+        <button class="soundIcon" id="sound-on"></button>
+    </div>  
+
+    <script src="js/sound.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
