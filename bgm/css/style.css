@@ -4,7 +4,7 @@
     left: 30px;
     width: 62px;
     height: 96px;
-    background: url('img/btn.png') center no-repeat;
+    background: url('../img/btn.png') center no-repeat;
     z-index: 5;
 }
 .soundIcon{
@@ -23,10 +23,10 @@ button {
 
 #sound-on {
     display: none;
-    background: url('img/on.png') center center no-repeat;
+    background: url('../img/on.png') center center no-repeat;
 }
 
 #sound-off {
     display: block;
-    background: url('img/off.png') center center no-repeat;
+    background: url('../img/off.png') center center no-repeat;
 }

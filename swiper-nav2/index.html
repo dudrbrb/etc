@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-nav-ex1</title>
+    <link rel="stylesheet" href="../common_file/css/reset.css">
+    <link rel="stylesheet" href="../common_file/css/swiper.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+  
+    <div class="swiper-container naviSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide nav1" data-hash="slide1">
+          Swiper Navi 1
+        </div>
+        <div class="swiper-slide nav2" data-hash="slide2">
+          Swiper Navi 2
+        </div>
+        <div class="swiper-slide nav3" data-hash="slide3">
+          Swiper Navi 3
+        </div>
+        <div class="swiper-slide nav4" data-hash="slide4">
+          Swiper Navi 4
+        </div>
+        <div class="swiper-slide nav5" data-hash="slide5">
+          Swiper Navi 5
+        </div>
+        <div class="swiper-slide nav6" data-hash="slide6">
+          Swiper Navi 6
+        </div>
+      </div>
+    </div>
+    
+    <div class="swiper-container mainSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" data-hash="slide1">
+          Slide 1 <br /><br />
+          컨텐츠 스와이퍼와 네비 스와이퍼를 controller.control로 연결할 땐 <br />
+          서로 옵션이 동일해야함!! <br /><br />
+          ex ) 컨텐츠 스와이퍼가 루프일땐 네비 스와이퍼도 루프
+        </div>
+        <div class="swiper-slide" data-hash="slide2">
+          Slide 2
+        </div>
+        <div class="swiper-slide" data-hash="slide3">
+          Slide 3
+        </div>
+        <div class="swiper-slide" data-hash="slide4">
+          Slide 4
+        </div>
+        <div class="swiper-slide" data-hash="slide5">
+          Slide 5
+        </div>
+        <div class="swiper-slide" data-hash="slide6">
+          Slide 6
+        </div>
+      </div>
+      
+      <div class="slide_prev">
+        <svg width="50px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
+          <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+            45.63,75.8 0.375,38.087 45.63,0.375 "/>
+        </svg>
+      </div>
+      
+      <div class="slide_next">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
+          <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+            0.375,0.375 45.63,38.087 0.375,75.8 "/>
+        </svg>
+      </div>
+      
+    </div>
+  </div>
+      <script src="../common_file/js/jquery-3.3.1.min.js"></script>
+      <script src="../common_file/js/TweenMax.min.js"></script>
+      <script src="../common_file/js/swiper.min.js"></script>
+      <script src="main.js"></script>
+
+</body>
+</html>

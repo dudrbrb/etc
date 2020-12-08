@@ -1,0 +1,74 @@
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  width: 540px;
+  margin: 0 auto;
+  -webkit-tap-highlight-color:transparent;
+  text-align: center;
+}
+
+input:focus,
+div:focus,
+button:focus{
+  outline:none;
+}
+
+.wrapper {
+  position: relative;
+  width: 540px;
+  height: auto;
+  overflow: hidden;
+}
+
+.naviSwiper{
+  height: 50px;
+  line-height: 50px;
+}
+
+.naviSwiper .swiper-slide{
+  width: 30%;
+  background: #9a8cfa;
+}
+
+.naviSwiper .swiper-slide:nth-child(2n) {
+  width: 60%;
+  background: #e190a5;
+}
+
+.naviSwiper .swiper-slide.on{
+  color: red;
+}
+
+.mainSwiper .swiper-slide {
+  height: 1000px;
+  padding-top: 200px;
+  background: linear-gradient(#bc67ff, #00daef);
+}
+
+.mainSwiper .swiper-slide:nth-child(2n) {
+  background: linear-gradient(#e38ab8, #dead45);
+  height: 1300px;
+}
+
+.slide_prev{
+  position: fixed;
+  top: 500px;
+  margin-left: 50%;
+  left: -270px;
+  z-index: 1;
+}
+
+.slide_next{
+  position: fixed;
+  top: 500px;
+  margin-right: 50%;
+  right: -270px;
+  z-index: 1;
+}
