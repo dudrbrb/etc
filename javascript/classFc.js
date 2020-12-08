@@ -35,3 +35,5 @@ function toggleClass(e, c) {
 if ( (" " +e.className + " ").replace(/[\n\t]/g, " ").indexOf(" "+ c+" ") > -1 ){
     alert( e+'에 '+ c +' 클래스가 있습니다')
 } 
+
+
