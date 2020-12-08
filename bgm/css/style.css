@@ -1,0 +1,32 @@
+.soundIconBg{
+    position: relative;
+    top: 0;
+    left: 30px;
+    width: 62px;
+    height: 96px;
+    background: url('img/btn.png') center no-repeat;
+    z-index: 5;
+}
+.soundIcon{
+    position: absolute;
+    top: 38px;
+    left: -9px;
+    width: 80px;
+    height: 58px;
+}
+button {
+    border: none;
+    background: none;
+    outline: none;
+    z-index: 2;
+}
+
+#sound-on {
+    display: none;
+    background: url('img/on.png') center center no-repeat;
+}
+
+#sound-off {
+    display: block;
+    background: url('img/off.png') center center no-repeat;
+}
