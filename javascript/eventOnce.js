@@ -2,5 +2,5 @@
 
 btnColor.addEventListener('click', function(){
     var target = [addBtn, removeBtn, toggleBtn, checkBtn]
-    target.forEach( t => t.style.background= "skyblue")
+    target.forEach( t => t.style.display= "block")
 })
