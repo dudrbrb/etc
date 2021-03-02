@@ -17,3 +17,16 @@ function hasClass(e, c) {
     return e.classList.contains(c); // true or false
 };
 
+// $(this).index() --> js
+var btn = document.querySelectorAll('.pagi div');
+
+[].forEach.call(btn, function(e){ 
+  e.addEventListener("click", function(){
+    console.log(getElementIndex(btn, e));
+  }, false); 
+});
+
+function getElementIndex(e, range) {
+    if (!!range) return [].indexOf.call(e, range);
+    return [].indexOf.call(e.parentNode.children, e);
+}
