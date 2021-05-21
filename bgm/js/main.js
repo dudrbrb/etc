@@ -19,8 +19,6 @@ soundON.addEventListener('click', bgmStop);
  */
 function bgmPlay() {
     if (!bgmNowPlaying) {
-        soundOff.style.display = 'none';
-        soundON.style.display = 'block';
         bgmNowPlaying = !bgmNowPlaying;
         bgm.startMusic();
     }
@@ -31,8 +29,6 @@ function bgmPlay() {
  */
 function bgmStop() {
     if (bgmNowPlaying) {
-        soundON.style.display = 'none';
-        soundOff.style.display = 'block';
         bgmNowPlaying = !bgmNowPlaying;
         bgm.pauseMusic();
     }

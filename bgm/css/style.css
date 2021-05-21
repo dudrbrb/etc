@@ -1,4 +1,4 @@
-.soundIconBg{
+.soundIcon-wrapper{
     position: relative;
     top: 0;
     left: 30px;
@@ -7,7 +7,7 @@
     background: url('../img/btn.png') center no-repeat;
     z-index: 5;
 }
-.soundIcon{
+.sound-icon{
     position: absolute;
     top: 38px;
     left: -9px;
@@ -21,12 +21,12 @@ button {
     z-index: 2;
 }
 
-#sound-on {
+#soundOn {
     display: none;
     background: url('../img/on.png') center center no-repeat;
 }
 
-#sound-off {
+#soundOff {
     display: block;
     background: url('../img/off.png') center center no-repeat;
 }
