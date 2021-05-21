@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            height: 2000px;
+            margin-top: 100px;
+            padding-top: 200px;
+        }
+        .box{
+            background-color: rgb(77, 175, 255);
+            width: 300px;
+            height: 300px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+<script>
+    let box = document.querySelector('.box'),  // 요소 선택
+        boxRect = box.getBoundingClientRect(),  // 각종 좌표값
+        boxRelativeTop = boxRect.top;  // 화면의 상단(viewport의 시작점)을 기준으로 한 상대좌표값
+
+    window.addEventListener('scroll', function(){
+        console.log(box.getBoundingClientRect().top) // 상대위치
+        console.log(box.getBoundingClientRect().top + window.pageYOffset) // 절대위치
+    })
+</script>
+</body>
+</html>
