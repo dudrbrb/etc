@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #2e78cc;
+            font-size: 62.5%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        button,
+        button::after {
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        button {
+            background: none;
+            border: 3px solid #fff;
+            border-radius: 5px;
+            color: #fff;
+            display: block;
+            font-size: 1.6em;
+            font-weight: bold;
+            margin: 1em auto;
+            padding: 2em 6em;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        button::before,
+        button::after {
+            background: #fff;
+            content: '';
+            position: absolute;
+            z-index: -1;
+        }
+
+        button:hover {
+            color: #2e78cc;
+        }
+
+        /* BUTTON 1 */
+        .btn1::after {
+            height: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .btn1:hover:after {
+            height: 100%;
+        }
+
+        /* BUTTON 2 */
+        .btn2::after {
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 0;
+        }
+
+        .btn2:hover:after {
+            width: 100%;
+        }
+
+        /* BUTTON 3 */
+        .btn3::after {
+            height: 0;
+            left: 50%;
+            top: 50%;
+            width: 0;
+        }
+
+        .btn3:hover:after {
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        /* BUTTON 4 */
+        .btn4::before {
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .btn4::after {
+            background: #2e78cc;
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .btn4:hover:after {
+            height: 0;
+            left: 50%;
+            top: 50%;
+            width: 0;
+        }
+
+        /* BUTTON 5 */
+        .btn5 {
+            overflow: hidden;
+        }
+
+        .btn5::after {
+            /*background-color: #f00;*/
+            height: 100%;
+            left: -35%;
+            top: 0;
+            transform: skew(50deg);
+            transition-duration: 0.6s;
+            transform-origin: top left;
+            width: 0;
+        }
+
+        .btn5:hover:after {
+            height: 100%;
+            width: 135%;
+        }
+
+
+        /* .btn1 {
+            background: linear-gradient(
+                -45deg,
+                #dbdbdb 0 50%,
+                #50bdef 50% 100%
+            );
+            background-size: 250% 100%;
+            background-position: 100% 50%;
+            color: #333;
+        }
+
+        .btn1:hover {
+            color: #F5F5F5;
+            background-position: 0% 50%;
+        }
+
+        .btn2 {
+            background: linear-gradient(
+                -45deg,
+                #50bdef 0 calc(50% - 10px),
+                #F5F5F5 calc(50% - 10px) calc(50% + 10px),
+                #1c6cb7 calc(50% + 10px) 100%
+            );
+            background-size: 250% 100%;
+            background-position: 100% 50%;
+        }
+
+        .btn2:hover {
+            background-position: 0% 50%;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button class="btn1">Button 1</button>
+        <button class="btn2">Button 2</button>
+        <button class="btn3">Button 3</button>
+        <button class="btn4">Button 4</button>
+        <button class="btn5">Button 5</button>
+    </div>
+
+
+
+    <!-- <div class="btn btn1">focus on me</div>
+    <div class="btn btn2">focus on me</div> -->
+    <script>
+
+    </script>
+</body>
+</html>
