@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Counting Motion</title>
     <style>
         h2{
             text-align: center;
@@ -14,6 +14,7 @@
     </style>
 </head>
 <body>
+    <h2>잠시 기다리면 모션이 실행됩니다</h2>
     <h2 id="count">0</h2>
     <script>
         let countBox = document.querySelector('#count'),
@@ -29,7 +30,7 @@
                 countBox.innerHTML = new Intl.NumberFormat().format(count);
             }, 20);
             
-        }, 5000);
+        }, 1000);
     </script>
 </body>
 </html>
