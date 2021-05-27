@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll motion</title>
+    <style>
+        body{
+            background-color: rgb(77, 175, 255);
+            width: 100%;
+        }
+        div{
+            position: relative;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 400px;
+        }
+        .title{
+           opacity: 0;
+           transform: translatey(50px);
+           transition: all 0.5s;
+           font-size: 30px;
+           color: #fefefe;
+        }
+        img{
+            width: 240px;
+            height: 300px;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="title">Woody</h1>
+        <img src="img/image1.jpg" alt="" class="images">
+    </div>
+    <div>
+        <h2 class="title">Buzz Lightyear</h2>
+        <img src="img/image2.jpg" alt="" class="images">
+    </div>
+    <div>
+        <h2 class="title">Bo Peep</h2>
+        <img src="img/image3.jpg" alt="" class="images">
+    </div>
+
+
+
+     
+    <script>
+        window.addEventListener('scroll', function(){
+            scrollMotion()
+        });
+
+        function scrollMotion(){
+            const ele = document.querySelectorAll('.title'),
+            ele2 = document.querySelectorAll('.images');
+                    
+            let eleOffsetArr = [];
+
+            ele.forEach(e => {
+                let eleOffset = e.getBoundingClientRect().top + window.pageYOffset - 300;
+                eleOffsetArr.push(eleOffset)
+            });
+            
+            eleOffsetArr.forEach((offset, idx) => {
+                if( window.scrollY > offset ){
+                    ele[idx].style.cssText = 'opacity:1; transform: translateY(0);'
+                    setTimeout(function () {
+                        ele2[idx].style.cssText = 'opacity:1; transform: translateX(0)';
+                    }, 200);
+                }else{
+                    ele[idx].style.cssText = 'opacity:0; transform: translateY(50px);'
+                    setTimeout(function () {
+                        ele2[idx].style.cssText = 'opacity:0; transform: translateX(-100px)';
+                    }, 200);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

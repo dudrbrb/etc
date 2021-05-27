@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .round{
+            width: 100px;
+            height: 100px;
+            background-color: #0a54ff;
+            border-radius: 50%;
+            transition: all 0.4s;
+            margin: 300px auto;
+            position: relative;
+            z-index: 10;
+        }
+        .round.ripple{
+            animation: ripple 1.5s linear infinite forwards;
+        }
+        @keyframes ripple {
+            0% {
+                box-shadow: 0 0 0 0 #0a53ffb7,
+                0 0 0 0.4em #5387ffaf,
+                0 0 0 0.8em #c7c7cf67,
+                0 0 0 1em #c7c7cf2c;
+            }
+            40% {
+                box-shadow: 0 0 0 0.4em #5387ffaf,
+                0 0 0 0.8em #5387ff81,
+                0 0 0 1em #c7c7cf67,
+                0 0 0 1.5em #c7c7cf2c;
+            }
+            90% {
+                box-shadow: 0 0 0 0.4em #5387ff7c,
+                0 0 0 0.8em #5387ff49,
+                0 0 0 1em #c7c7cf34,
+                0 0 0 1.5em #c7c7cf00;
+            }
+            100% {
+                box-shadow: 0
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="round"></div>
+
+<script>
+    const round = document.querySelector('.round')
+    setTimeout(() => {
+        console.log('aa')
+        round.classList.add('ripple')
+    }, 2000);
+</script>
+
+</body>
+</html>

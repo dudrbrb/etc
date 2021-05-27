@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll motion</title>
+    <style>
+        body{
+            width: 100%;
+            background-color: rgb(77, 175, 255);
+
+            padding-top: 500px;
+            padding-bottom: 1000px;
+        }
+        .title{
+           width: 100%;
+           opacity: 0;
+           transform: translatey(50px);
+           transition: all 0.5s;
+           font-size: 30px;
+           margin: 40px;
+           text-align: center;
+           color: #fefefe;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">제목1</h1>
+    <h2 class="title">제목2</h2>
+    <h2 class="title">제목3</h2>
+    <h2 class="title">제목4</h2>
+
+     
+    <script>
+        window.addEventListener('scroll', function(){
+            scrollMotion()
+        });
+
+        function scrollMotion(){
+            const ele = document.querySelectorAll('.title'),
+      		      eleOffset = ele[0].getBoundingClientRect().top + window.pageYOffset - 300;
+
+            if(window.scrollY > eleOffset){
+                ele.forEach((ele, idx) => {
+                setTimeout(() => {
+                    ele.style.cssText = 'opacity: 1; transform: translateY(0);'
+                }, 180*idx);
+                });
+            }else{
+                ele.forEach((ele, idx) => {
+                setTimeout(() => {
+                    ele.style.cssText = 'opacity: 0; transform: translateY(50);'
+                }, 180*idx);
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
