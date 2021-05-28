@@ -18,9 +18,18 @@
     
     <script>
         let counter = document.querySelector('.counter');
-        let today = new Date(); //현재 날짜 가져오기
+        let today = new Date(); // 대한민국 표준시
+           
+        let year = today.getFullYear(), // 이번 년도 
+            month = today.getMonth() + 1, // 이번 달
+            day = today.getDate(); // 오늘 날짜
+       
+        let hours = today.getHours(), // 현재 시간
+            minutes = today.getMinutes(),// 현재 분
+            seconds = today.getSeconds(), // 현재 초
+            milliSeconds = today.getMilliseconds() // 현재 밀리초
 
-        counter.innerHTML = today
+        console.log(`${year}년 ${month}월 ${day}일`)
     </script>
 </body>
 </html>
